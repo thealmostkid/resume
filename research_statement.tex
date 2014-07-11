@@ -1,0 +1,345 @@
+\documentclass[10pt]{article}
+
+\topmargin      0.0in
+\headheight     0.0in
+\headsep        0.0in
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textheight     9.0in
+\textwidth      6.5in
+
+\author{Nathanael Thompson}
+\title{Research Statement}
+
+\begin{document}
+%\maketitle
+\begin{center}
+\begin{tabular}{lr}
+\textbf{\Large{Research Statement}} \hfill & \hfill \textbf{\Large{Nathanael Thompson}} \\
+\hline
+\end{tabular}
+\end{center}
+
+What is future of mobile computing?
+
+One, fat pipes to the cloud.  How to access cloud services from mobile device.
+
+Second, a less explored future is direct device to device communication.  It
+complements the first development by expanding coverage, potentially reducing
+network load on backhaul links and facilitating the deployment of new services
+and applications for end-users.
+
+Because of the proliferation of devices in unlicensed spectrum and decreasing
+cost of computing, there are tons of devices out there including phones, cars,
+sensors, laptops, private and public wi-fi basestations.
+
+The resources of these devices can be pooled to increase the available
+communication, but also the environmental awareness of end-users.
+
+The challenges of harnessing this unused resource come from the the fact that
+the devices are all end-user devices.  Compared to Internet-based servers and
+routers, the devices are very limited in resources.  In addition, each device
+or small set of devices is managed by a different user making configuration and
+management difficult.
+
+From a networking perspective, these challenges impact the performance of the
+network in terms of throughput/delivery rate and delay.
+
+Existing networking solutions to improve network performance are not applicable
+in the user-created network scenario.  Because the networks are deployed by
+end-users themselves, no end-to-end solutions can be used.  It is also unlikely
+that end-users can deploy services in the Internet to meet their needs, and
+because the network is user-created there is no financial incentive for third
+parties to support the network.
+
+Therefore, new solutions are needed that do not rely on any infrastructure-based
+support.  In my research I have developed protocols and algorithms that rely
+only on local information to dynamically adapt to the changing resources of UN.
+
+
+Congestion control for DTNs:
+In many cases the UN will be only intermittently connected.
+Store-carry-forward.  Uses replication.  Overwhelms or underwhelms.
+
+Replication management is needed to find correct balance.  Our replication
+management is node-based, etc.
+
+
+Integrating private wi-fi access points:
+One advantage of the un is that it can offload traffic from the WWAN backhaul
+links.  In order to do so available bandwidth from wifi needs to be
+incorporated.  
+The available throughput is limited and delay might be bad depending on access
+point.
+However, users are often presented with multiple access points in range.
+Need to aggregate them.  PERM is a completely-local user aggregation framework.
+It connects to multiple access points and schedules traffic based on user
+behavior by doing flow-scheduling.
+
+Due to a number of high profile security violations and a better educated
+populace, users are becoming less and less willing to leave their access points
+open for public access.  However, as several projects have demonstrated, users
+are willing to share their bandwidth with other people.  A global authentication
+mechanism is needed to authenticate devices in the UN.  Must be central because
+of the huge scope.  However, online centralized authentication can incur very
+high delay (bad when connections are short), might experience outages and
+requires large resources.  To address these challenges I have developed
+authentication on the edge in collaboration with researchers at Deutsche-Telekom
+Laboratories.
+It's offline and cool.
+
+
+Ongoing Work
+One promising application for UN is location-based services.  To best support
+location-based services, location-based routing is needed.  It scales and avoids
+expensive translations.  Solutions exist for ad hoc networks.  However,
+intermittent connectivity in UN breaks existing solutions.  Simply adding
+store-carry-and-forward is insufficient.  Examining new routing techniques.
+
+
+
+
+
+Two directions for mobile computing.  First is fast wireless connections to the
+cloud through 4G, LTE, Wi-Max providing access to Internet services and data.
+The evolution of mobile broadband means better services to the end-user.  Yet,
+there remains a second direction for mobile computing which has yet to be fully
+realized.  
+Wireless networking and decrease in cost of computing has resulted in an
+explosion of mobile computers such as handsets/smart phones, vehicles, embedded
+sensors, mesh networks, private wi-fi access points and laptop computers,
+leading to an increasing abundance of direct
+device-to-device communication opportunities.
+
+While the device-to-device communication can extend network coverage
+and allow new services and applications to be delivered to end-users, such
+user-created networks (UNs) are deployed on end-user devices by end-users
+themselves which creates challenges due to the limited resources and management
+available.
+
+I like mobile and ubiquitous computing with a focus on wireless networking.
+
+
+\noindent \textbf{Vision: User Created Networks} \\
+% Wireless devices are everywhere.
+The explosion of wireless communication devices that operate in the
+unlicensed spectrum has created a potential utopia for on-demand networking.
+% Lots of opportunities for dynamic networks (unlicnesed and spontaneous)
+With millions of Wi-Fi enabled devices in the hands of end-users, the
+networking opportunities are abundant.
+Any person, anywhere can create a data network and communicate with other people
+nearby.  
+% Benefits.
+Because these user-created networks (UNs) are deployed by end-users themselves,
+the monetary cost to
+expand network coverage is close to zero, making user-created networks an
+efficient method to increase the network bandwidth and availability
+for everyone.
+
+User-created networks will only truly be useful if multiple end-users 
+collaboratively pool their resources and carry each other's
+traffic.  While the co-operative approach expands the available resources for
+each user, it also places a burden on the limited resources of the end-user
+devices.
+% Challenges in these networks coming from dynamism:
+In addition, communication in user-created scenarios is challenged by the
+dynamics and heterogeneity of the network arising
+from node mobility, fluctuations in the
+wireless channel, unpredictable
+node availability and unplanned node deployment.
+The result is that devices may be subjected to frequent periods of
+disconnectivity which further increases the resource demand.
+% limited resources (demand participation of devices themselves)
+% no pre-configuration (resource detection and utilitization)
+
+
+% Existing solutions won't work because of lack of reliable access to existing
+% infrastructure and performance considerations.
+Any solutions to alleviate the burden of
+co-operative networking for user-created networks
+cannot rely on supporting infrastructure to achieve their goal.
+The user-created network is deployed by end-users who only manage
+their own set of devices at the edge of the network and typically are
+not able to deploy services in the Internet.  In addition, users are likely
+unwilling to pay for user-created networking, meaning the incentive for
+third-parties to support user-created networks is low.
+
+% My research realizes we need local solutions to the above problems.
+%While some of these requirements have been studied before, existing research has
+%focused on targeted domains and is largely inapplicable to the user-created
+%network environment.
+In my research I have designed protocols and algorithms for user-created
+networks that only use local
+information to dynamically adapt to the changing resource and communication
+constraints of the network.  These solutions operate without the need of
+external infrastructure, only using it to enhance performance if available.
+I use real-world implementations and simulation results to demonstrate the
+effectiveness of these approaches. \\
+
+
+
+\noindent \textbf{Congestion Control for Intermittently-Connected Networks}
+%In some cases user-created networks are delay tolerant.
+In many cases user-created networks will be only intermittently-connected due to
+human mobility and areas of sparse deployment.
+Such intermittently-connected networks (ICNs)
+lack stable end-to-end paths rendering existing routing techniques ineffective.
+In order to improve the
+delivery rates of the networks, new store-carry-and-forward protocols have been
+proposed which often use message replication as a forwarding mechanism.  
+% Store-carry-and-forward networks have three constraints.  Storage, bandwidth
+% and energy.
+Message
+replication is effective at improving delivery, but given the limited
+resources of ICN nodes, such as buffer space, bandwidth and energy, 
+%as well as the highly dynamic nature of these networks, 
+replication can easily overwhelm
+node resources.  Over-replication leads to network congestion and reduced
+delivery while under-replication can lead to missed delivery opportunities.  
+
+By managing the replication rate in the network, an effective balance can be
+found that minimizes congestion of resources and improves delivery rates.
+Traditional sender-based congestion control does not succeed in this
+environment.  Intermittent
+connectivity, path diversity, high loss rates and long response times
+make it difficult for the sender to react to congestion in a timely
+and effective manner.  Also, a sender cannot know
+how every node that will receive a replica of its messages should
+react.  
+Instead of sender-based congestion control, congestion control in ICNs
+becomes a problem of managing replication at every individual node in the
+network.
+
+% CC provides node-based, localized congestion control for ICNs.
+In response to this challenge, I have developed a novel
+node-based replication management algorithm which prevents congestion by
+dynamically limiting the
+replication a node performs during each encounter~\cite{thompson:cc:infocom10}. 
+The algorithm operates locally at individual nodes without requiring global
+knowledge.  Because each node runs independently, the algorithm can easily
+respond to different environments in the network where the congestion might be
+higher or lower.
+To do this, individual nodes estimate
+current congestion levels by locally sampling network replications and drops.
+Using the sample, each node sets a limit on the number of messages it will
+transfer during the next encounter.
+Simulation results show that our algorithm is
+effective, nearly tripling delivery rates in some scenarios, and
+imposes no or little overhead. \\
+
+% Extended with energy.
+%On-going work extends replication limiting to include energy management into the
+%per-encouter limit.
+
+
+\noindent \textbf{Flow Scheduling to Aggregate Available Bandwidth}
+% Performance of user-created networks depends on smart usage of dynamically
+% changing resources.
+High performance communication in user-created networks is only achievable if
+the dynamically available resources are effectively utilized.  An important
+resource in user-created networks
+is the available outgoing bandwidth to the Internet.  Publically-accessible
+802.11 basestations, installed in homes or businesses, are widely available in
+most areas.  In addition, WWAN enabled devices with 3G or 4G connections
+can also become Internet gateways to service nearby clients.
+However, the available bandwidth through each gateway is limited due to
+contention from other users, the sharing policies of the owner or the backhaul
+link itself.
+
+By connecting simultaneously to more than one gateway either using software or
+hardware techniques, an end-user can achieve higher bandwidth and higher
+connection resiliency.
+% aggregating in UN is different than before (related work)
+Previous research to utilize multiple Internet connections cannot be deployed in
+the user-created network because of the lack of reliable infrastructure support.
+Existing solutions require either protocol support from the end-hosts in the
+Internet or LAN or interact with proxy servers.
+A dynamically deployed network created by end-users cannot expect such
+infrastructure support to be available.
+
+
+%PERM monitors available wireless basestations and schedules traffic based on
+%learned user behavior.
+To operate without external support, an end-host must perform flow scheduling
+across the multiple available Internet connections.  I have designed and
+implemented the PERM system for performing end-host flow
+scheduling~\cite{thompson:perm:infocom06}.
+Based on our study of individual end-user networking
+behaviors~\cite{he:traffic:mobihoc05}, PERM 
+exploits its proximity to the end-user to improve scheduling effectiveness
+by adopting automated on-line learning of the
+end-user's traffic patterns to make the best match between flows and available
+Internet connections.  
+By monitoring the available bandwidth on each connection, PERM can intelligently
+schedule flows to reduce latency and increase throughput.
+Evaluation in a residential deployment with the open source OpenWRT wireless
+router and Linux and Windows clients shows 
+significantly improved reliability, throughput and response times for typical
+end-user traffic.  \\
+
+
+\noindent \textbf{Authentication on the Edge}
+% lack of trust and privacy.
+Once end-users begin carrying traffic for each other in a user-created network,
+trust becomes an issue.  
+% Authentication is needed to create trust.
+To ensure accountability and authorization, mutual authentication between users
+is needed.
+%Centralized trust to avoid bootstrap and agreement.
+Because the user-created network can include users of different organizations,
+private APs and ISP networks,
+centralized trust management is needed.
+% Online authentication takes too long.
+However, online centralized authentication
+is not practical in user-created networks.  Existing authentication schemes are
+either overwhelmed by the large size of the
+user created network in terms of number of clients as well as physical
+deployment or degrade in performance too much from the network delay and
+possible loss of connection when
+communicating with Internet-based servers from the user-created network.
+
+% AGE is offline authentication for user-created networks.
+In collaboration with researchers at Deutsche Telekom T-Labs, I have developed
+a localized and distributed
+authentication method for open Wi-Fi networks that can be used between any
+devices in the user-created
+network~\cite{thompson:age:mobicom07, thompson:organic:hotmobile08}.
+The protocol
+adapts to the variability and unreliability of these networks by using 
+certificate-based authentication, the distribution of certificate revocation
+list segments to all entities, and the self organization of access points into a
+social look-up network.  These techniques allow for offline authentication of
+centrally administered credentials between devices.  Devices only need to sync
+with the central
+trust store infrequently based on the user-configured freshness threshold.
+The protocol has been implemented as an extension to the FreeRADIUS server and
+shown to reduce overall
+authentication delays are by as much as 71\% compared to existing
+authentication schemes applied in the same scenario.   \\
+
+
+\noindent \textbf{Ongoing/Future Work}
+Many services for user-created networks are location-based and therefore would
+benefit from location-aware routing.
+Disconnected.  Many services benefit from geographic routing.  Existing
+geographic routing does not do multicopy and often assumes a lot of information
+from network.
+
+Building from previous work, we are designing a node-based multi-copy geographic
+forwarding protocol for VANETs.  The protocol decides which messages to copy
+during an ecounter based on the geographic information available at each node.
+Geographic information speeds spread through the network towards the
+destination.  Multicopy allows for multiple path exploration and increases the
+chances that a mobile node will be found. \\
+
+
+\noindent \textbf{Other research}
+I have also done research on scheduling gossip streams to reduce
+overhead in emerging multiple-source, multiple-recipient message distribution
+systems~\cite{ucan:piggyback:midsens07} as well as researching design
+methodologies for self-* distributed systems~\cite{gupta:methodology:lncs05}.
+
+\footnotesize
+\bibliographystyle{plain}
+\bibliography{nat-pubs}
+\end{document}

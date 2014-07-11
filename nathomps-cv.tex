@@ -1,0 +1,582 @@
+\documentstyle[centered,overlapped]{res}
+
+\newenvironment{inmargins}[1]{\begin{list}{}{
+   \leftmargin=#1 \rightmargin=#1 \parsep=0pt
+   \partopsep=0pt}\item[]}{\end{list}}
+
+\newenvironment{packed_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{.80pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\newenvironment{packed_item}{
+\begin{itemize}
+  \setlength{\itemsep}{.80pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\addtolength{\textheight}{15mm}
+\addtolength{\topmargin}{-5mm}
+%\addtolength{\oddsidemargin}{-.25in}
+%\addtolength{\textwidth}{.25in}
+\addtolength{\sectionskip}{-4mm}
+%\addtolength{\resumewidth}{.25in}
+\addtolength{\sectionwidth}{-.3in}
+
+%\topmargin      -0.25in
+%\headheight     0.0in
+%\headsep        0.0in
+\oddsidemargin  -0.25in
+\evensidemargin -0.25in
+\resumewidth	7.0in
+%\textheight     9.5in
+%\textwidth      6.5in
+
+\name{\Large{\textbf{Nathanael Thompson}}}
+\address{(469) 230-7125\\nat$@$alumni.brown.edu\\http://mobius.cs.uiuc.edu/people/thompson}
+\address{1102 Lincolnshire Drive\\Champaign, IL 61821\\USA}
+
+\begin{document}
+\begin{resume}
+%\Resume
+
+%
+% Overview
+%
+\iffalse
+\section{Overview}
+My research focuses on the areas of mobile systems and wireless
+networking as well as distributed computing and the Internet.
+My objective is to apply my expertise in these areas to develop and deploy new
+software systems that improve end-user communication and expand it in new
+directions.
+\fi
+
+%My research is targeted at the unique systems problems found in the deployment
+%of end-user created wireless networks.  Such networks are becoming increasingly
+%common due the high availability of wireless networking components and
+%include, for example, open
+%Wi-Fi access points, social ad-hoc networks and disruption-tolerant
+%opportunistic networks.
+%My work focuses on improving the availability,
+%accessibility and performance of these networks by creating new local and
+%distributed protocols
+%and algorithms and providing real world implementations that inter-operate with
+%existing systems.  
+%I also have two years industry experience debugging Sun's Java implementation
+%and interacting with external developers.
+
+%
+% Education
+%
+\section{Education}
+
+\begin{tabular*}{6.10in}[t]{l@{\extracolsep{\fill}}r}
+\textbf{PhD}, Computer Science&University of Illinois at
+Urbana-Champaign\\
+2010&Urbana, IL\\
+\end{tabular*}
+\begin{packed_item}
+\item
+Thesis title: ``Opportunistic Resource
+Management to Improve Network Service Performance in User-Created
+Networks''\\
+Thesis advisor: Prof. Robin Kravets
+\item
+GPA: 3.73/4.0
+\end{packed_item}
+
+
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Bachelor of Science with Honors}, Computer Science&Brown University\\
+2001&Providence, RI\\
+\end{tabular*}
+\begin{packed_item}
+\item
+Concentration in Systems and Networking.  GPA: 3.6/4.0
+%\item
+%Senior Honors Thesis: ``Group Membership in Ad Hoc Networks''
+\end{packed_item}
+
+
+%
+% research experience
+%
+\section{Professional Experience}
+% MOBIUS
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Graduate Research Assistant}&MOBIUS Research Group, Prof. Robin Kravets\\
+2008-present&University of Illinois at Urbana-Champaign\\
+\end{tabular*}
+%\begin{inmargins}{0.25in}
+%Participating in the Phoenix project to research delay tolerant communication in
+%day-after networks - networks formed with limited or unavailable access to the
+%core Internet infrastructure.
+%\end{inmargins}
+% TODO: make this project: challenges: solutions
+\begin{packed_item}
+\item
+Designed and simulated a congestion control protocol for delay-tolerant networks
+that locally adjusts the
+per-encounter replication limit based on measured network conditions.  
+\item
+Created a
+stochastic model of message delivery in delay-tolerant networks that inspired
+the design of our congestion detection mechanism.
+\item
+Evaluated in simulators OMNET++ and ONE (C++/Java) with bash and perl scripts.
+\end{packed_item}
+
+% T-Labs
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Research Intern}&Deutsche Telekom Laboratories\\
+Summer 2006&Berlin, Germany\\
+\end{tabular*}
+%\begin{inmargins}{0.25in}
+%The Authentication on the Edge (AGE) project describes a new authentication
+%architecture for global scale open Wi-Fi networks.
+%A new paradigm for providing outdoor broadband access is emerging
+%in which private entities (small businesses or residential users) open their
+%private Wi-Fi access points to nearby users in exchange for access privileges at
+%other users' locations.  In order for these open Wi-Fi networks to gain wide
+%adoption strict access control and traceability are needed.  AGE localizes
+%authentications to the edge of the network by requiring each user to carry all
+%of his authentication credentials.  AGE supports a social network overlay as a
+%fall back mechanism to relieve the bottleneck and single failure point of a
+%central authentication server.
+%\end{inmargins}
+\begin{packed_item}
+\item
+Co-created Authentication on the Edge (AGE) procedure for
+authentication in open Wi-Fi networks
+with millions of mobile clients which demand strict access control and
+traceability.
+\item
+Developed distributed protocol incorporating novel distribution of credentials
+and a social network overlay fall-back mechanism.
+\item
+Implemented AGE modules for FreeRADIUS and wpa\_supplicant for Linux in C.
+\end{packed_item}
+
+
+% SWING
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Graduate Research Assistant}&SWiNG Research Group, Prof. Haiyun Luo\\
+2005-2007&University of Illinois at Urbana-Champaign\\
+\end{tabular*}
+%\begin{inmargins}{0.25in}
+%The Practical collaborative End-host Residential Multihoming (PERM) project
+%seeks to capitalize on idle residential bandwidth to improve end-host
+%connectivity performance and reliability.  PERM uses 802.11 to link neighbors
+%into a semi-mesh network.  The framework includes unique
+%predictive scheduling, user privacy management, and incentive management.
+%%The SWiNG group conducts research in the design, implementation, and evaluation
+%%of wireless
+%%systems, networking, and applications. SWiNG's research areas include wireless
+%%Internet access, self-learning wireless protocols, self-organized wireless
+%%systems, scalable wireless mesh, reliable wireless networks, and future embedded
+%%networks.
+%\end{inmargins}
+\begin{packed_item}
+\item
+Primary researcher on the Practical End-host Residential
+Multihoming (PERM) project
+for collaborative Internet access and bandwidth
+sharing over wireless networks.
+\item
+Designed predictive scheduling techniques for residential multihoming.
+\item
+Wrote PERM software framework in C for Linux and
+OpenWRT Linksys router firmware.
+\end{packed_item}
+
+
+% DPRG
+\iffalse
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Graduate Research Assistant}&DPRG Research Group, Prof. Indranil Gupta\\
+2004-2005&University of Illinois at Urbana-Champaign\\
+\end{tabular*}
+%\begin{inmargins}{0.25in}
+%%The DPRG group studies design, implementation, and
+%%evaluation issues for large-scale distributed systems such as peer-to-peer
+%%systems, the Grid and sensor networks.
+%Our design methodology for distributed protocols identifies multiple building
+%blocks which compose many probabilistic protocols previously developed.  The
+%methodology also specifies the composition rules by which the building blocks
+%are combined into complete protocols.  The Proactive Protocol Composition
+%Language is used to specify new protocols from existing C code based on this
+%methodology.
+%\end{inmargins}
+\begin{packed_item}
+\item
+Researched methodologies for composing and designing distributed protocols using
+multiple building blocks which compose many probabilistic protocols previously
+developed.
+\item
+Developed the Proactive Protocol Composition Language (PPCL), a toolkit 
+for composing distributed protocols from existing C code.
+\end{packed_item}
+\fi
+
+% NCSA
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Graduate Research Programmer}&
+National Center for Supercomputing Applications\\
+2004-2005&Urbana, IL\\
+\end{tabular*}
+%\dates{2004-2005}
+%\employer{NCSA}
+%\location{Urbana, IL}
+%\title{Graduate Research Programmer}
+%\begin{position}
+%\begin{inmargins}{0.15in}
+%The Distributed Applications Support Team at NCSA was part of the National
+%Laboratory of Advanced Network Research.  The group developed tools for
+%monitoring and managing high performance networks.
+%\end{inmargins}
+\begin{packed_item}
+\item
+Contributed to the design and implementation
+of advanced network monitoring and analysis tool
+that allows end-users to diagnose common
+Internet problems based on gathered metrics.
+\item
+Implemented new network tests and updated and maintained
+the large Java project (NLANR Network Performance Advisor).
+\end{packed_item}
+%\end{position}
+
+
+%\pagebreak
+
+
+
+\iffalse
+% Pablo
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Graduate Research Assistant}&Pablo Research Group, Prof. Dan Reed\\
+2003-2004&University of Illinois at Urbana-Champaign\\
+\end{tabular*}
+%\begin{inmargins}{0.25in}
+%The Pablo research group researched areas of high performance computing
+%including performance characterization, high speed I/O, and Grid monitoring.
+%\end{inmargins}
+\begin{packed_item}
+\item
+Researched temporal performance monitoring in the Grid as part of the GrADS
+project.
+\end{packed_item}
+\fi
+
+% Sun
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Member Technical Staff}&Sun Microsystems\\%, JavaSoft\\
+2001-2003&Santa Clara, CA\\
+\end{tabular*}
+%\dates{2001-2003}
+%\employer{Sun Microsystems}
+%\location{Santa Clara, CA}
+%\title{Member Technical Staff, JavaSoft}
+%\begin{position}
+\begin{packed_item}
+%\renewcommand{\labelitemi}{$-$}
+\item
+Assessed and validated incoming customer bug reports regarding inconsistencies
+in the Java Development Kit including core Java, Java Web Start, JSSE, the Java
+compiler and JFC.
+\item
+Designed and implemented internal tools in JSP, Java, PERL, bash,
+sql, sed and awk.
+\end{packed_item}
+%\end{position}
+
+
+
+% Bosch
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Undergraduate Intern}&
+Robert Bosch GmbH FV/FLI (R\&D/Systems Laboratory)\\
+Summer 2000&Stuttgart, Germany\\
+\end{tabular*}
+\begin{packed_item}
+\item
+Implemented prototype steer-by-wire system in C based on CAN protocol.   
+%The
+%steer-by-wire system attempts to obsolete the traditional steering
+%column designs with a completely electronic replacement.  Challenges include
+%fault tolerance and message priority.
+\end{packed_item}
+
+%
+% Work
+%
+%\section{Work Experience}
+%\begin{format}
+%\employer{l}\title{r}\\
+%\dates{l}\location{r}\\
+%\body\\
+%\end{format}
+
+\pagebreak
+
+%
+% publications
+%
+\section{Publications}
+\begin{packed_enum}
+\item
+\textbf{Nathanael Thompson}, Riccardo Crepaldi and Robin Kravets. ``Locus: A
+Location-based Data Overlay For Disruption-Tolerant Networks'', to appear
+\textit{Proceedings ACM CHANTS}, Chicago, USA, September, 2010.
+
+\item
+\textbf{Nathanael Thompson}, Samuel C. Nelson, Mehedi Bakht, Tarek Abdelzaher
+and Robin Kravets.  ``Retiring Replicants: Congestion Control for
+Intermittently-Connected Networks'', \textit{Proceedings IEEE
+INFOCOM}, San Diego, USA, March, 2010.
+
+\item
+\textbf{Nathanael Thompson}, Petros Zerfos, Robert Sombrutzki,
+Jens-Peter Redlich and
+Haiyun Luo.  ``100\% Organic: Design and Implementation of
+Self-Sustaining Cellular Networks'', \textit{Proceedings ACM
+HotMobile}, Napa Valley, USA, February, 2008.
+
+\item
+\textbf{Nathanael Thompson}, Haiyun Luo, Petros Zerfos, Jatinder Singh,
+Zuoning Yin.  
+``Extended Abstract: Authentication on the Edge - Distributed Authentication
+for a Global Open Wi-Fi Network'', \textit{Proceedings ACM MobiCom},
+Montr\'eal, Canada, September, 2007.
+%Montréal, Canada, September, 2007
+
+\item
+Ercan Ucan, \textbf{Nathanael Thompson}, Indranil Gupta.
+``A PiggyBacking Approach to
+Reduce Overhead in Sensor Network Gossip'', \textit{Proceedings ACM MIDSENS},
+Newport Beach, USA, November, 2007.
+
+\item
+\textbf{Nathanael Thompson}, Guanghui He, Haiyun Luo.
+``Flow Scheduling for End-host
+Multihoming,'' \textit{Proceedings IEEE INFOCOM}, Barcelona,
+Spain, April, 2006.
+
+\item
+Indranil Gupta, Steve Ko, \textbf{Nathanael Thompson}, Mehwish Nagda,
+Christo F.  Devaraj, Ramsés Morales, Jay A. Patel. ``A Case for Methodology
+Research in Self-* Distributed Systems,'' LNCS 3460, \textit{Self-Star
+Properties in Complex Information Systems (eds: O. Babaoglu et al)},
+pages 260-272, 2005.
+
+\end{packed_enum}
+
+
+%
+% Patents
+%
+\section{Patents (pending)}
+\begin{packed_enum}
+\item
+``Method and System for Distributed, Localized Authentication in the Framework
+of 802.11i'', Petros Zerfos, Jatinder Singh, Marcin Solarski, Pablo Vidales,
+\textbf{Nathanael Thompson}, Haiyun Luo, US Provisional Patent No. 60970595,
+Filed in September 2007.
+\end{packed_enum}
+
+
+\iffalse
+%
+% tech reports
+%
+\section{Technical Reports}
+\begin{packed_enum}
+
+\item
+\textbf{Nathanael Thompson}, Haiyun Luo,
+``PERM: A Collaborative System for Residential
+Internet Access,'' \textit{Technical Report UIUCDCS-R-2006-2751}, University of
+Illinois, July, 2006.
+
+%\item
+%Nathanael Thompson, Ercan Ucan, Indranil Gupta, ``Scheduling of Multi-Stream
+%Gossip Systems,'' \textit{Technical Report UIUCDCS-R-2006-2726}, University of
+%Illinois, May, 2006
+
+\item
+\textbf{Nathanael Thompson}, Indranil Gupta, Kenneth Birman.
+``A Composition Methodology
+for Designing Pro-active Distributed Protocols,'' \textit{Technical Report
+UIUCDCS-R-2004-2490}, University of Illinois, October, 2004.
+
+\end{packed_enum}
+\fi
+
+
+%
+% posters
+%
+\section{Posters}
+\begin{packed_enum}
+\item
+\textbf{Nathanael Thompson} and Robin Kravets.
+``Understanding and Controlling Congestion
+in Delay Tolerant Networks,'' \textit{Poster, ACM MobiCom}, San Francisco, CA,
+September, 2008.
+
+\item
+Guanghui He, \textbf{Nathanael Thompson}, Haiyun Luo.
+``Individual User WLAN Traffic
+Analysis,'' \textit{Poster, ACM MobiHoc}, Champaign, Illinois, May, 2005.
+\end{packed_enum}
+
+\iffalse
+%
+% Thesis
+%
+\section{Undergraduate Honors Thesis}
+\begin{packed_enum}
+\item
+\textbf{Nathanael Thompson}, Thomas W. Doeppner, Maurice Herlihy,
+``Group Membership in
+Ad Hoc Wireless Networks,'' \textit{Undergraduate Honors Thesis, Brown
+University}, Providence, RI, May, 2001.
+\end{packed_enum}
+\fi
+
+
+
+%
+% Talks
+%
+\section{Talks}
+\begin{packed_enum}
+\item
+``Congestion Control for Intermittently-Connected
+Networks'', INFOCOM, March 2010.
+\item
+``Design and Implementation of
+Self-Sustaining Cellular Networks'', HotMobile, Feb.\ 2008.
+\item
+``Flow Scheduling for End-host Multihoming'', INFOCOM, April 2006.
+\end{packed_enum}
+
+
+%
+% Media Coverage
+%
+\section{Media Coverage}
+\begin{packed_item}
+\item
+Brown, Bob.
+``Residential Wi-Fi sharing made easy.'' NetworkWorld.com. 27 April 2006
+\\$<$http://www.networkworld.com/news/2006/042706-sharing-wi-fi.html$>$.
+\end{packed_item}
+
+%
+% awards
+%
+\section{Awards and Activities}
+\begin{packed_item}
+\item
+Recipient 2008 ACM MobiCom travel grant.
+\item
+Recipient of 2006 Deutsche Telekom PAM (PhD - Advisor - Mentor) Fellowship.
+\item
+Member ACM SIGMOBILE and IEEE ComSoc.
+\end{packed_item}
+
+%
+% teaching
+%
+\section{Teaching Experience}
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Graduate Teaching Assistant}&University of Illinois at Urbana-Champaign\\
+2006&Urbana, IL\\
+\end{tabular*}
+\begin{packed_item}
+\item
+Assistant for large undergraduate programming course and graduate level
+networking class.
+\item
+Led weekly discussion sections and held office hours.
+\item
+Designed student homeworks, programming assignments and exams.
+\end{packed_item}
+
+
+\iffalse
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Graduate Teaching Assistant}&CS241: System Programming\\
+Fall 2006&University of Illinois at Urbana-Champaign\\
+\end{tabular*}
+%\begin{inmargins}{0.25in}
+%CS241 is an undergraduate level course teaching introductory systems
+%programming and Operating Systems concepts.
+%\end{inmargins}
+\begin{packed_item}
+\item
+Led two weekly discussion sections of 20 students each.
+\item
+Designed and graded student programming assignments.
+\item
+Wrote student homework and co-wrote exams.
+\end{packed_item}
+
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+\textbf{Graduate Teaching Assistant}&CS438: Computer Networks\\
+Spring 2006&University of Illinois at Urbana-Champaign\\
+\end{tabular*}
+%\begin{inmargins}{0.25in}
+%CS438 is a mixed senior / graduate level class teaching introductory concepts in
+%networking.  Students also complete advanced systems programming assignments.
+%\end{inmargins}
+\begin{packed_item}
+\item
+Developed homework and programming assignments.
+\item
+Delivered several lectures and held office hours.
+\end{packed_item}
+\fi
+
+%
+% tech skills
+%
+\section{Technical Skills}
+%\begin{ncolumn}{2}
+\begin{tabular*}{6.10in}{ll}
+Operating Platforms:&Linux, Mac OS X, Xen hypervisor\\
+Programming Languages:&C, Java, PERL, sed, awk, bash, MATLAB\\
+Web Technologies:&PHP, JSP, HTML, CGI, SQL\\
+%Other Technologies:&subversion (CVS), LaTeX, vi\\
+Spoken Languages:& English (native), German (excellent), French (conversational), \\ & Mandarin (basic spoken)\\
+
+\end{tabular*}
+%\end{ncolumn}
+
+
+%
+% Languages
+%
+\iffalse
+\section{Languages}
+English (native), German (excellent), French (conversational), Mandarin (basic
+spoken).
+\fi
+
+%
+% references
+%
+\iffalse
+\section{References}
+\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
+References available upon request.&\\
+\end{tabular*}
+\fi
+
+\end{resume}
+\end{document}
