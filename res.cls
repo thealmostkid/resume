@@ -749,7 +749,7 @@
 \newenvironment{position}%
   {%
    \begingroup
-     \par
+%     \par
        \the\tabular@head
 %     \addpenalty{-\@secpenalty}% bad place for a page break
      \penalty -\@secpenalty % bad place for a page break

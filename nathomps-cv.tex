@@ -15,8 +15,10 @@
 \begin{itemize}
   \setlength{\itemsep}{.80pt}
   \setlength{\parskip}{0pt}
-  \setlength{\parsep}{0pt}
+  \setlength{\parsep}{24pt}
 }{\end{itemize}}
+
+\newcommand{\flattenlist}{\vspace{-4mm}}
 
 \addtolength{\textheight}{15mm}
 \addtolength{\topmargin}{-5mm}
@@ -24,20 +26,20 @@
 %\addtolength{\textwidth}{.25in}
 \addtolength{\sectionskip}{-4mm}
 %\addtolength{\resumewidth}{.25in}
-\addtolength{\sectionwidth}{-.3in}
+\addtolength{\sectionwidth}{0in}
+\resumewidth	7.5in
 
 %\topmargin      -0.25in
 %\headheight     0.0in
 %\headsep        0.0in
-\oddsidemargin  -0.25in
-\evensidemargin -0.25in
-\resumewidth	7.0in
+%\oddsidemargin  -0.25in
+%\evensidemargin -0.25in
 %\textheight     9.5in
 %\textwidth      6.5in
 
 \name{\Large{\textbf{Nathanael Thompson}}}
 \address{(469) 230-7125\\nat$@$alumni.brown.edu}
-\address{1102 Lincolnshire Drive\\Champaign, IL 61821\\USA}
+\address{1102 Lincolnshire Drive\\Champaign, IL 61821}%\USA}
 
 \begin{document}
 \begin{resume}
@@ -74,11 +76,19 @@ directions.
 %
 \section{Education}
 
-\begin{tabular*}{6.10in}[t]{l@{\extracolsep{\fill}}r}
-\textbf{PhD}, Computer Science&University of Illinois at
-Urbana-Champaign\\
-2010&Urbana, IL\\
-\end{tabular*}
+% format for this section
+\begin{format}
+\title{l}\employer{r}\\
+\dates{l}\location{r}\\
+\body
+\end{format}
+
+\employer{University of Illinois at Urbana-Champaign}
+\title{\textbf{PhD}, Computer Science}
+\dates{2010}
+\location{Urbana, IL}
+\begin{position}
+\flattenlist
 \begin{packed_item}
 \item
 Thesis title: ``Opportunistic Resource
@@ -88,35 +98,44 @@ Thesis advisor: Prof. Robin Kravets
 \item
 GPA: 3.73/4.0
 \end{packed_item}
+\end{position}
 
-
-\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
-\textbf{Bachelor of Science with Honors}, Computer Science&Brown University\\
-2001&Providence, RI\\
-\end{tabular*}
+\employer{Brown University}
+\title{\textbf{BS with Honors}, Computer Science}
+\dates{2001}
+\location{Providence, RI}
+\begin{position}
+\flattenlist
 \begin{packed_item}
 \item
 Concentration in Systems and Networking.  GPA: 3.6/4.0
 \item
 Senior Honors Thesis: ``Group Membership in Ad Hoc Networks''
 \end{packed_item}
-
+\end{position}
 
 %
-% research experience
+% professional experience
 %
 \section{Professional Experience}
-% ByteMobile
-\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
-\textbf{Senior Software Engineer II}&Citrix ByteMobile\\
-2010-present&Champaign, IL\\
-\end{tabular*}
+\begin{format}
+\title{l}\employer{r}\\
+\dates{l}\location{r}\\
+\body
+\end{format}
+
+\employer{Citrix ByteMobile}
+\title{\textbf{Senior Software Engineer II}}
+\dates{2010-present}
+\location{Champaign, IL}
+\begin{position}
+\flattenlist
 \begin{packed_item}
 \item
 Design, implement and maintain features for dynamic optimization of Internet
 video.
 \item
-Rearchitect software modules for increased performance (30\% reduction
+Re-architect software modules for increased performance (30\% reduction
 in latency in one case), extensibility and stability.
 \item
 Champion for improved software engineering practices including test-driven
@@ -125,25 +144,27 @@ black-box testing.
 \item
 Lead small development teams (2-3 developers) using Scrum methodologies.
 \end{packed_item}
+\end{position}
 
 
 % MOBIUS
-\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
-\textbf{Graduate Research Assistant}&Advisor: Prof. Robin Kravets\\
-2003-2010&University of Illinois at Urbana-Champaign\\
-\end{tabular*}
+\employer{Advisor: Prof. Robin Kravets}
+\title{\textbf{Graduate Research Assistant}}
+\dates{2003-2010}
+\location{University of Illinois at Urbana-Champaign}
+\begin{position}
 %\begin{inmargins}{0.25in}
 %Participating in the Phoenix project to research delay tolerant communication in
 %day-after networks - networks formed with limited or unavailable access to the
 %core Internet infrastructure.
 %\end{inmargins}
-% TODO: make this project: challenges: solutions
+\flattenlist
 \begin{packed_item}
 \item
 Research focus on creating protocols and software to enable sharing of idle
 network resources by end-users in dynamic mobile-computing environments.
 \item
-Developed a congestion control protocol for intermittenly-connected networks
+Developed a congestion control protocol for intermittently-connected networks
 that improves message delivery by between 15\% and 73\% in extreme cases. 
 Results are based on simulation and modeling.
 \item
@@ -163,13 +184,15 @@ by up to 15\% for short-duration flows and can improve download times by
 28\%-62\% for longer-lived sessions.  Results from testbed based on OpenWRT
 Linux router.
 \end{packed_item}
+\end{position}
 
 
 % T-Labs
-\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
-\textbf{Research Intern}&Deutsche Telekom Laboratories\\
-Summer 2006&Berlin, Germany\\
-\end{tabular*}
+\employer{Deutsche Telekom Laboratories}
+\title{\textbf{Research Intern}}
+\dates{2006}
+\location{Berlin, Germany}
+\begin{position}
 %\begin{inmargins}{0.25in}
 %The Authentication on the Edge (AGE) project describes a new authentication
 %architecture for global scale open Wi-Fi networks.
@@ -183,20 +206,23 @@ Summer 2006&Berlin, Germany\\
 %fall back mechanism to relieve the bottleneck and single failure point of a
 %central authentication server.
 %\end{inmargins}
+\flattenlist
 \begin{packed_item}
 \item
 Analyzed SMS traces to inform design of end-user-based authentication for
 shared Wi-Fi networks which was implemented
 for FreeRADIUS and wpa\_supplicant for Linux.
 \end{packed_item}
+\end{position}
 
 
 
 % DPRG
-\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
-\textbf{Graduate Research Assistant}&DPRG Research Group, Prof. Indranil Gupta\\
-2004-2005&University of Illinois at Urbana-Champaign\\
-\end{tabular*}
+\employer{DPRG Research Group, Prof. Indranil Gupta}
+\title{\textbf{Graduate Research Assistant}}
+\dates{2004-2005}
+\location{University of Illinois at Urbana-Champaign}
+\begin{position}
 %\begin{inmargins}{0.25in}
 %%The DPRG group studies design, implementation, and
 %%evaluation issues for large-scale distributed systems such as peer-to-peer
@@ -208,6 +234,7 @@ for FreeRADIUS and wpa\_supplicant for Linux.
 %Language is used to specify new protocols from existing C code based on this
 %methodology.
 %\end{inmargins}
+\flattenlist
 \begin{packed_item}
 \item
 Researched methodologies for composing and designing distributed protocols using
@@ -217,28 +244,24 @@ developed.
 Developed the Proactive Protocol Composition Language (PPCL), a toolkit 
 for composing distributed protocols from existing C code.
 \end{packed_item}
-\iffalse
-\fi
+\end{position}
 
 \pagebreak
 \section{Professional Experience (cont.)}
+% reuse format from initial professional experience
 
 % NCSA
-\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
-\textbf{Graduate Research Programmer}&
-National Center for Supercomputing Applications\\
-2004-2005&Urbana, IL\\
-\end{tabular*}
-%\dates{2004-2005}
-%\employer{NCSA}
-%\location{Urbana, IL}
-%\title{Graduate Research Programmer}
-%\begin{position}
+\employer{National Center for Supercomputing Applications}
+\title{\textbf{Graduate Research Programmer}}
+\dates{2004-2005}
+\location{Urbana, IL}
+\begin{position}
 %\begin{inmargins}{0.15in}
 %The Distributed Applications Support Team at NCSA was part of the National
 %Laboratory of Advanced Network Research.  The group developed tools for
 %monitoring and managing high performance networks.
 %\end{inmargins}
+\flattenlist
 \begin{packed_item}
 \item
 Implemented and maintained several Java packages including network test suite
@@ -246,44 +269,39 @@ and core analysis engine
 as part of advanced network monitoring and analysis tool
 (NLANR Network Performance Advisor) that allows end-users to diagnose common
 Internet problems based on gathered metrics.
-
 \end{packed_item}
-%\end{position}
+\end{position}
 
 
-
-
-
-\iffalse
 % Pablo
-\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
-\textbf{Graduate Research Assistant}&Pablo Research Group, Prof. Dan Reed\\
-2003-2004&University of Illinois at Urbana-Champaign\\
-\end{tabular*}
+\iffalse
+\employer{Pablo Research Group, Prof. Dan Reed}
+\title{\textbf{Graduate Research Assistant}}
+\dates{2003-2004}
+\location{University of Illinois at Urbana-Champaign}
+\begin{position}
 %\begin{inmargins}{0.25in}
 %The Pablo research group researched areas of high performance computing
 %including performance characterization, high speed I/O, and Grid monitoring.
 %\end{inmargins}
+\flattenlist
 \begin{packed_item}
 \item
 Researched temporal performance monitoring in the Grid as part of the GrADS
 project.
 \end{packed_item}
+\end{position}
 \fi
 
 %\pagebreak
 % Sun
-\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
-\textbf{Member Technical Staff, Java}&Sun Microsystems\\%, JavaSoft\\
-2001-2003&Santa Clara, CA\\
-\end{tabular*}
-%\dates{2001-2003}
-%\employer{Sun Microsystems}
-%\location{Santa Clara, CA}
-%\title{Member Technical Staff, JavaSoft}
-%\begin{position}
+\employer{Sun Microsystems}
+\title{\textbf{Member Technical Staff, Java}}
+\dates{2001-2003}
+\location{Santa Clara, CA}
+\begin{position}
+\flattenlist
 \begin{packed_item}
-%\renewcommand{\labelitemi}{$-$}
 \item
 Processed customer bug reports regarding problems
 in the Java Development Kit including core Java, Web Start, JSSE and the
@@ -292,16 +310,17 @@ Java compiler.
 Developed internal tools using
 JSP, Java servlets, Apache Struts, SQL and perl.
 \end{packed_item}
-%\end{position}
-
+\end{position}
 
 
 % Bosch
-\begin{tabular*}{6.10in}{l@{\extracolsep{\fill}}r}
-\textbf{Undergraduate Intern}&
-Robert Bosch GmbH FV/FLI (R\&D/Systems Laboratory)\\
-Summer 2000&Stuttgart, Germany\\
-\end{tabular*}
+%\employer{Robert Bosch GmbH FV/FLI (R\&D/Systems Laboratory)}
+\employer{Robert Bosch (R\&D/Systems Laboratory)}
+\title{\textbf{Undergraduate Intern}}
+\dates{Summer 2000}
+\location{Stuttgart, Germany}
+\begin{position}
+\flattenlist
 \begin{packed_item}
 \item
 Implemented prototype steer-by-wire system in C based on CAN protocol.   
@@ -310,8 +329,7 @@ Implemented prototype steer-by-wire system in C based on CAN protocol.
 %column designs with a completely electronic replacement.  Challenges include
 %fault tolerance and message priority.
 \end{packed_item}
-\iffalse
-\fi
+\end{position}
 
 
 %
@@ -324,11 +342,13 @@ Implemented prototype steer-by-wire system in C based on CAN protocol.
 Location-based Data Overlay For Disruption-Tolerant Networks'', 
 \textit{Proceedings ACM CHANTS}, Chicago, USA, September, 2010.
 
+\iffalse
 \item
 \textbf{Nathanael Thompson}, Samuel C. Nelson, Mehedi Bakht, Tarek Abdelzaher
 and Robin Kravets.  ``Retiring Replicants: Congestion Control for
 Intermittently-Connected Networks'', \textit{Proceedings IEEE
 INFOCOM}, San Diego, USA, March, 2010.
+\fi
 
 \item
 \textbf{Nathanael Thompson} and Robin Kravets.  ``Poster Abstract:
@@ -552,7 +572,8 @@ Delivered several lectures and held office hours.
 \section{Programming Languages}
 %\begin{ncolumn}{2}
 \begin{tabular*}{6.10in}{ll}
-Primary: C++, Java, C, perl, bash&Secondary: python, JavaScript\\
+\textit{Primary}: C++, Java, C, perl, bash&
+\textit{Secondary}: python, JavaScript\\
 %Debugging environments:&dbx, gdb\\
 %Other Technologies:&subversion (CVS), LaTeX, vi\\
 %Spoken Languages:& English (native), German (excellent), French (conversational), \\ & Mandarin (basic spoken)\\
