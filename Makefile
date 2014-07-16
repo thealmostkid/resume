@@ -5,7 +5,7 @@ DVIPS=dvips -t letter -Pcmz
 PS2PDF=ps2pdf
 
 RES=nathomps-cv
-CL=pivotal-letter
+CL=coverletter
 RS=rs
 all: cv 
 
